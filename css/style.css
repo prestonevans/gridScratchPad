@@ -7,7 +7,8 @@
 
 body {
   display: grid;
-  grid-template-rows: repeat(2, 1fr 2fr);
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: repeat(4, 1fr);
   color: white;
 }
 
@@ -19,24 +20,28 @@ body * {
 header {
   background-color: pink;
   padding: 4rem;
+  grid-column: span 2;
 }
 
 main {
   background-color: black;
+  padding: 1rem;
+  grid-row: span 2;
+  display: flex;
+  align-items: center;
 }
 
 footer {
   background-color: cadetblue;
+  transform: rotate(2deg) translateY(-20px);
+  padding: 2rem;
+  grid-column: span 3;
+  display: flex;
+  align-items: center;
 }
 
 .black {
   color: black;
-}
-
-@media only screen and (min-width: 1200px) {
-  body {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
